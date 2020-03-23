@@ -25,11 +25,16 @@ app.get('/problem', (req, res) => {
 // Sending some JSON
 app.get('/info', (req, res) => {
 	// object converted to JSON string
-	res.send({
+	res.send([{
 		name: 'John',
 		year: 3,
 		courses: ['csc309', 'csc301']
-	})
+	},
+	{
+	name: 'Billy',
+	year: 3,
+	courses: ['csc309', 'csc301']
+	}])
 })
 
 // will use an 'environmental variable', process.env.PORT, for deployment.
